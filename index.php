@@ -20,5 +20,12 @@ $products = [
     ['name' => 'Dyson V11 Vacuum Cleaner', 'price' => 2500],
 ];
 
+$data = [
+    'name' => 'Dawid',
+    'hour' =>date('G'),
+];
+
+
+echo $twig->render('hello.twig', $data);
 echo $twig->render('products.twig', ['products' => $products]);
 ?>

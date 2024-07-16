@@ -14,11 +14,24 @@
     <br>
     {{ "now"|date("m/d/Y") }}
     {% elseif hour < 18%}
-    Good afternoon, {{name}}!
+    Good afternoon, {{name|lower}}!
+    <br>
+    {{ "now"|date("m/d/Y") }}
     {% else %}
     Good evening, {{name}}!
     {% endif %}
    </h1>
+
+
+
+   {# map key value#}
+   {% set people = {
+    "Bob": "Smith",
+    "Alice": "Dupond",
+} %}
+
+{{ people|map((value, key) => "#{key} #{value}")|join(', ') }}
+   
 </div>
     
 </body>
