@@ -1,0 +1,58 @@
+[
+    {
+        "label": "General settings",
+        "state": "unfolded",
+        "elements": [
+            {
+                "name": "infobox",
+                "type": "infobox",
+                "options": {
+                    "type": "blank",
+                    "message": "#### Related settings in the admin panel%s- setting the [shop name](%s) and default [phone number and e-mail address](%s)",
+                    "placeholderValues": [
+                        "\n",
+                        "\/admin\/config",
+                        "\/admin\/config\/company"
+                    ]
+                }
+            },
+            {
+                "name": "showHeader",
+                "type": "checkbox",
+                "label": "Display module header",
+                "supportsTranslations": true,
+                "defaultValue": 0,
+                "children": [
+                    {
+                        "name": "textHeader",
+                        "type": "text",
+                        "relations": [
+                            {
+                                "parentName": "showHeader",
+                                "parentValueToActionsMap": [
+                                    {
+                                        "value": 0,
+                                        "actions": [
+                                            "setHidden",
+                                            "setDisabled"
+                                        ]
+                                    },
+                                    {
+                                        "value": 1,
+                                        "actions": [
+                                            "setVisible",
+                                            "setAvailable"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "label": "Content of the module header",
+                        "isRequired": true,
+                        "supportsTranslations": true
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age</title>
+</head>
+<body>
+    
+
+    {% for tes in test %}
+    {% if tes.age > 18 %}
+    <p>{{tes.name}} masz > 18lat</p>
+    {% else %}
+    <p>{{tes.name}} nie masz 18 lat</p>
+    {% endif %}
+    {% endfor %}
+
+    {% set time = ObjectApi.getTime("12:30:15") %}
+    {{ time.hours }}
+</body>
+</html>

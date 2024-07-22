@@ -25,7 +25,13 @@ $data = [
     'hour' =>date('G'),
 ];
 
+$test = [
+    ['name' => 'Dawid', 'age' => 24],
+    ['name' => 'Michał', 'age' => 17],
+];
 
+
+echo $twig->render('age.twig', ['test' => $test]);
 echo $twig->render('hello.twig', $data);
 echo $twig->render('products.twig', ['products' => $products]);
 ?>
